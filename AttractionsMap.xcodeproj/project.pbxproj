@@ -9,21 +9,46 @@
 /* Begin PBXBuildFile section */
 		720C7A6D243283C70018B1EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C7A6C243283C70018B1EF /* AppDelegate.swift */; };
 		720C7A6F243283C70018B1EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C7A6E243283C70018B1EF /* SceneDelegate.swift */; };
-		720C7A71243283C70018B1EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C7A70243283C70018B1EF /* ViewController.swift */; };
+		720C7A71243283C70018B1EF /* AppleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C7A70243283C70018B1EF /* AppleMapViewController.swift */; };
 		720C7A74243283C70018B1EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720C7A72243283C70018B1EF /* Main.storyboard */; };
 		720C7A76243283C70018B1EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720C7A75243283C70018B1EF /* Assets.xcassets */; };
 		720C7A79243283C70018B1EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720C7A77243283C70018B1EF /* LaunchScreen.storyboard */; };
+		720C7A822432A1B00018B1EF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720C7A812432A1B00018B1EF /* MapKit.framework */; };
+		720C7A852432A4350018B1EF /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720C7A832432A4350018B1EF /* RealmSwift.framework */; };
+		720C7A862432A4350018B1EF /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 720C7A832432A4350018B1EF /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		720C7A872432A4350018B1EF /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720C7A842432A4350018B1EF /* Realm.framework */; };
+		720C7A882432A4350018B1EF /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 720C7A842432A4350018B1EF /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72BF69772432AF7D0037A74F /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF69762432AF7D0037A74F /* Attraction.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		720C7A892432A4350018B1EF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				720C7A882432A4350018B1EF /* Realm.framework in Embed Frameworks */,
+				720C7A862432A4350018B1EF /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		720C7A69243283C70018B1EF /* AttractionsMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttractionsMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		720C7A6C243283C70018B1EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		720C7A6E243283C70018B1EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		720C7A70243283C70018B1EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		720C7A70243283C70018B1EF /* AppleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapViewController.swift; sourceTree = "<group>"; };
 		720C7A73243283C70018B1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		720C7A75243283C70018B1EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		720C7A78243283C70018B1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		720C7A7A243283C70018B1EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		720C7A812432A1B00018B1EF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		720C7A832432A4350018B1EF /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		720C7A842432A4350018B1EF /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		72BF69762432AF7D0037A74F /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720C7A872432A4350018B1EF /* Realm.framework in Frameworks */,
+				720C7A852432A4350018B1EF /* RealmSwift.framework in Frameworks */,
+				720C7A822432A1B00018B1EF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +70,7 @@
 			children = (
 				720C7A6B243283C70018B1EF /* AttractionsMap */,
 				720C7A6A243283C70018B1EF /* Products */,
+				720C7A802432A1B00018B1EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +85,34 @@
 		720C7A6B243283C70018B1EF /* AttractionsMap */ = {
 			isa = PBXGroup;
 			children = (
+				720C7A8B2432A4FD0018B1EF /* AppleMaps */,
 				720C7A6C243283C70018B1EF /* AppDelegate.swift */,
 				720C7A6E243283C70018B1EF /* SceneDelegate.swift */,
-				720C7A70243283C70018B1EF /* ViewController.swift */,
 				720C7A72243283C70018B1EF /* Main.storyboard */,
 				720C7A75243283C70018B1EF /* Assets.xcassets */,
 				720C7A77243283C70018B1EF /* LaunchScreen.storyboard */,
 				720C7A7A243283C70018B1EF /* Info.plist */,
+				72BF69762432AF7D0037A74F /* Attraction.swift */,
 			);
 			path = AttractionsMap;
+			sourceTree = "<group>";
+		};
+		720C7A802432A1B00018B1EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				720C7A842432A4350018B1EF /* Realm.framework */,
+				720C7A832432A4350018B1EF /* RealmSwift.framework */,
+				720C7A812432A1B00018B1EF /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		720C7A8B2432A4FD0018B1EF /* AppleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				720C7A70243283C70018B1EF /* AppleMapViewController.swift */,
+			);
+			path = AppleMaps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +125,8 @@
 				720C7A65243283C70018B1EF /* Sources */,
 				720C7A66243283C70018B1EF /* Frameworks */,
 				720C7A67243283C70018B1EF /* Resources */,
+				720C7A892432A4350018B1EF /* Embed Frameworks */,
+				720C7A8A2432A4720018B1EF /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -133,12 +183,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		720C7A8A2432A4720018B1EF /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		720C7A65243283C70018B1EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				720C7A71243283C70018B1EF /* ViewController.swift in Sources */,
+				72BF69772432AF7D0037A74F /* Attraction.swift in Sources */,
+				720C7A71243283C70018B1EF /* AppleMapViewController.swift in Sources */,
 				720C7A6D243283C70018B1EF /* AppDelegate.swift in Sources */,
 				720C7A6F243283C70018B1EF /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +360,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T6696YN386;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AttractionsMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,6 +382,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T6696YN386;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AttractionsMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
