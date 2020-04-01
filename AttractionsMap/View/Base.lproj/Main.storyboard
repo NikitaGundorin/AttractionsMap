@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kry-VZ-4Mz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Apple Map View Controller-->
+        <!--Apple-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AppleMapViewController" customModule="AttractionsMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                                 </connections>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="tye-Gg-0vT">
-                                <rect key="frame" x="20" y="804" width="374" height="38"/>
+                                <rect key="frame" x="20" y="755" width="374" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-QP-dgh">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="38"/>
@@ -61,6 +61,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Apple" image="map.fill" catalog="system" id="L02-jc-R3y"/>
                     <connections>
                         <outlet property="mapView" destination="yPA-YK-ou9" id="G0B-xU-b0l"/>
                         <outlet property="myLocationButton" destination="Kdx-QP-dgh" id="yaJ-TG-2Tg"/>
@@ -69,7 +70,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="134"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
+        </scene>
+        <!--Google-->
+        <scene sceneID="L08-Me-URs">
+            <objects>
+                <viewController id="crx-MZ-a9k" customClass="GoogleMapsViewController" customModule="AttractionsMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ni3-mf-NSd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kl9-2w-1Tv" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kl9-2w-1Tv" firstAttribute="leading" secondItem="qT2-KT-vK3" secondAttribute="leading" id="eCy-xu-DHs"/>
+                            <constraint firstItem="qT2-KT-vK3" firstAttribute="trailing" secondItem="kl9-2w-1Tv" secondAttribute="trailing" id="eku-D5-B2V"/>
+                            <constraint firstAttribute="bottom" secondItem="kl9-2w-1Tv" secondAttribute="bottom" id="gpk-yF-3jp"/>
+                            <constraint firstItem="kl9-2w-1Tv" firstAttribute="top" secondItem="Ni3-mf-NSd" secondAttribute="top" id="npU-pJ-8Gy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qT2-KT-vK3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Google" image="location.circle.fill" catalog="system" id="xI2-8f-gdr"/>
+                    <connections>
+                        <outlet property="mapView" destination="kl9-2w-1Tv" id="yWY-HF-WwB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vAI-dh-tjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873.913043478261" y="133.92857142857142"/>
+        </scene>
+        <!--Yandex-->
+        <scene sceneID="Zhq-uc-MPi">
+            <objects>
+                <viewController id="kKq-Bz-onv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ads-tz-l3f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IHm-R0-gH9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Yandex" image="location.fill" catalog="system" id="eYV-Th-v5H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mf4-eh-9UT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2710.144927536232" y="133.92857142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Cs1-vX-UC1">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kry-VZ-4Mz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2pf-Xp-MHV">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="FSX-De-Wl7"/>
+                        <segue destination="crx-MZ-a9k" kind="relationship" relationship="viewControllers" id="nTJ-KL-b0L"/>
+                        <segue destination="kKq-Bz-onv" kind="relationship" relationship="viewControllers" id="Aog-aH-Pxb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nkv-kR-8Ng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="location.fill" catalog="system" width="128" height="115"/>
+        <image name="map.fill" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

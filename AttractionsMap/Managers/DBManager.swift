@@ -15,9 +15,6 @@ class DBManager {
     let realm = try! Realm()
     
     init() {
-        try! realm.write {
-            realm.deleteAll()
-        }
         if getAttractions().count == 0 {
             loadDefaultAttractions()
         }
