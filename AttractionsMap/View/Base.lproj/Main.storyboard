@@ -120,14 +120,62 @@
         <!--Yandex-->
         <scene sceneID="Zhq-uc-MPi">
             <objects>
-                <viewController id="kKq-Bz-onv" sceneMemberID="viewController">
+                <viewController id="kKq-Bz-onv" customClass="YandexMapViewController" customModule="AttractionsMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ads-tz-l3f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SF-9R-40r" customClass="YMKMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="uIS-i6-0DO">
+                                <rect key="frame" x="20" y="755" width="374" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dP-P0-W4J">
+                                        <rect key="frame" x="0.0" y="0.0" width="132.5" height="38"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Show my location">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="myLocationPressed:" destination="kKq-Bz-onv" eventType="touchUpInside" id="eQJ-TV-FZe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tg0-xV-Zl8">
+                                        <rect key="frame" x="210.5" y="0.0" width="163.5" height="38"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Show nearby attraction">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nearbyButtonPressed:" destination="kKq-Bz-onv" eventType="touchUpInside" id="YyP-1t-8r8"/>
+                                            <action selector="nearbyButtonPressef:" destination="crx-MZ-a9k" eventType="touchUpInside" id="Lag-cM-swL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IHm-R0-gH9" firstAttribute="trailing" secondItem="uIS-i6-0DO" secondAttribute="trailing" constant="20" id="2Av-mn-uJ2"/>
+                            <constraint firstAttribute="trailing" secondItem="8SF-9R-40r" secondAttribute="trailing" id="Fmx-Dc-ryw"/>
+                            <constraint firstItem="8SF-9R-40r" firstAttribute="top" secondItem="ads-tz-l3f" secondAttribute="top" id="S2E-Oc-MrA"/>
+                            <constraint firstItem="IHm-R0-gH9" firstAttribute="bottom" secondItem="uIS-i6-0DO" secondAttribute="bottom" constant="20" id="UbB-HJ-hiz"/>
+                            <constraint firstAttribute="bottom" secondItem="8SF-9R-40r" secondAttribute="bottom" id="WzG-Bi-YEd"/>
+                            <constraint firstItem="uIS-i6-0DO" firstAttribute="leading" secondItem="IHm-R0-gH9" secondAttribute="leading" constant="20" id="l8i-Au-1GS"/>
+                            <constraint firstItem="8SF-9R-40r" firstAttribute="leading" secondItem="ads-tz-l3f" secondAttribute="leading" id="zyK-Fx-5oC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IHm-R0-gH9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Yandex" image="location.fill" catalog="system" id="eYV-Th-v5H"/>
+                    <connections>
+                        <outlet property="mapView" destination="8SF-9R-40r" id="Ork-RA-mmm"/>
+                        <outlet property="myLocationButton" destination="4dP-P0-W4J" id="ONF-MW-1F5"/>
+                        <outlet property="nearbyButton" destination="Tg0-xV-Zl8" id="4Pd-zv-nJZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mf4-eh-9UT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,6 +187,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kry-VZ-4Mz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2pf-Xp-MHV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

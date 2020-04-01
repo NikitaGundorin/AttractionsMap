@@ -8,13 +8,16 @@
 
 import UIKit
 import GoogleMaps
+import YandexMapKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let apiKey = "AIzaSyAztK1-L3NVzAsVOHmbhStCkSBNfjm88Wk"
-        GMSServices.provideAPIKey(apiKey)
+        let googleApiKey = "AIzaSyAztK1-L3NVzAsVOHmbhStCkSBNfjm88Wk"
+        let yandexApiKey = "258f0aeb-e294-433e-91a0-1bd9b80ef8ac"
+        GMSServices.provideAPIKey(googleApiKey)
+        YMKMapKit.setApiKey(yandexApiKey)
         
         return true
     }

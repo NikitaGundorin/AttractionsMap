@@ -19,6 +19,7 @@
 		72BF697C2433A0B10037A74F /* AttractionAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF697B2433A0B10037A74F /* AttractionAnnotation.swift */; };
 		72BF698324347FAA0037A74F /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF698224347FAA0037A74F /* GoogleMapsViewController.swift */; };
 		72BF6985243486470037A74F /* AttractionMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF6984243486470037A74F /* AttractionMarker.swift */; };
+		72E118562434BF2A00C16BEB /* YandexMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E118552434BF2A00C16BEB /* YandexMapViewController.swift */; };
 		E426F58CEC75C5EAB9CAB6C8 /* Pods_AttractionsMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5786FBCFE46900F9B721BE /* Pods_AttractionsMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		72BF697B2433A0B10037A74F /* AttractionAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionAnnotation.swift; sourceTree = "<group>"; };
 		72BF698224347FAA0037A74F /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		72BF6984243486470037A74F /* AttractionMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionMarker.swift; sourceTree = "<group>"; };
+		72E118552434BF2A00C16BEB /* YandexMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexMapViewController.swift; sourceTree = "<group>"; };
 		7C9D4BFF333D7C7A62ED41A6 /* Pods-AttractionsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttractionsMap.debug.xcconfig"; path = "Target Support Files/Pods-AttractionsMap/Pods-AttractionsMap.debug.xcconfig"; sourceTree = "<group>"; };
 		8A5786FBCFE46900F9B721BE /* Pods_AttractionsMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttractionsMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		986796479F1A89B0E5417BAC /* Pods-AttractionsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttractionsMap.release.xcconfig"; path = "Target Support Files/Pods-AttractionsMap/Pods-AttractionsMap.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,8 +87,7 @@
 		720C7A6B243283C70018B1EF /* AttractionsMap */ = {
 			isa = PBXGroup;
 			children = (
-				720C7A8B2432A4FD0018B1EF /* AppleMaps */,
-				72BF698024347F8E0037A74F /* GoogleMaps */,
+				72E118542434BF1300C16BEB /* Controllers */,
 				72BF697E2433ED240037A74F /* View */,
 				72BF6978243345770037A74F /* Managers */,
 				720C7A6C243283C70018B1EF /* AppDelegate.swift */,
@@ -105,14 +106,6 @@
 				8A5786FBCFE46900F9B721BE /* Pods_AttractionsMap.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		720C7A8B2432A4FD0018B1EF /* AppleMaps */ = {
-			isa = PBXGroup;
-			children = (
-				72BF697F2433ED330037A74F /* Controller */,
-			);
-			path = AppleMaps;
 			sourceTree = "<group>";
 		};
 		72BF6978243345770037A74F /* Managers */ = {
@@ -142,28 +135,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		72BF697F2433ED330037A74F /* Controller */ = {
+		72E118542434BF1300C16BEB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				720C7A70243283C70018B1EF /* AppleMapViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		72BF698024347F8E0037A74F /* GoogleMaps */ = {
-			isa = PBXGroup;
-			children = (
-				72BF698124347F990037A74F /* Controller */,
-			);
-			path = GoogleMaps;
-			sourceTree = "<group>";
-		};
-		72BF698124347F990037A74F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
 				72BF698224347FAA0037A74F /* GoogleMapsViewController.swift */,
+				72E118552434BF2A00C16BEB /* YandexMapViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +280,7 @@
 			files = (
 				72BF697A243345820037A74F /* DBManager.swift in Sources */,
 				72BF69772432AF7D0037A74F /* Attraction.swift in Sources */,
+				72E118562434BF2A00C16BEB /* YandexMapViewController.swift in Sources */,
 				720C7A71243283C70018B1EF /* AppleMapViewController.swift in Sources */,
 				720C7A6D243283C70018B1EF /* AppDelegate.swift in Sources */,
 				72BF6985243486470037A74F /* AttractionMarker.swift in Sources */,
@@ -453,9 +433,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T6696YN386;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)"
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AttractionsMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,9 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T6696YN386;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)"
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AttractionsMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

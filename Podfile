@@ -5,5 +5,6 @@ target 'AttractionsMap' do
 
   pod 'RealmSwift'
   pod 'GoogleMaps'
+  pod 'YandexMapKit'
 
 end

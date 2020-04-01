@@ -9,22 +9,30 @@ PODS:
   - Realm/Headers (4.4.0)
   - RealmSwift (4.4.0):
     - Realm (= 4.4.0)
+  - YandexMapKit (3.5.0):
+    - YandexRuntime (= 3.5.0)
+  - YandexRuntime (3.5.0)
 
 DEPENDENCIES:
   - GoogleMaps
   - RealmSwift
+  - YandexMapKit
 
 SPEC REPOS:
   trunk:
     - GoogleMaps
     - Realm
     - RealmSwift
+    - YandexMapKit
+    - YandexRuntime
 
 SPEC CHECKSUMS:
   GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
   RealmSwift: 33656a42bd300959a081fc13347376bc478071af
+  YandexMapKit: ecd4b78de34a35df63d066ac299e6fd0fe46d1ba
+  YandexRuntime: 2d55244d06267106cf9b00c25a1e63f72a73b6fd
 
-PODFILE CHECKSUM: 046ad23b59648d43d4a5c69745dc0ac97849257d
+PODFILE CHECKSUM: 5697fdd3776e3a7ca78303049a93c0b12c86ab5c
 
 COCOAPODS: 1.9.1
