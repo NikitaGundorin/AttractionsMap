@@ -32,8 +32,6 @@
 		720C7A78243283C70018B1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		720C7A7A243283C70018B1EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		720C7A812432A1B00018B1EF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		720C7A832432A4350018B1EF /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		720C7A842432A4350018B1EF /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		72BF69762432AF7D0037A74F /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 		72BF6979243345820037A74F /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		72BF697B2433A0B10037A74F /* AttractionAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionAnnotation.swift; sourceTree = "<group>"; };
@@ -87,10 +85,10 @@
 		720C7A6B243283C70018B1EF /* AttractionsMap */ = {
 			isa = PBXGroup;
 			children = (
+				720C7A8B2432A4FD0018B1EF /* AppleMaps */,
 				72BF698024347F8E0037A74F /* GoogleMaps */,
 				72BF697E2433ED240037A74F /* View */,
 				72BF6978243345770037A74F /* Managers */,
-				720C7A8B2432A4FD0018B1EF /* AppleMaps */,
 				720C7A6C243283C70018B1EF /* AppDelegate.swift */,
 				720C7A6E243283C70018B1EF /* SceneDelegate.swift */,
 				720C7A75243283C70018B1EF /* Assets.xcassets */,
@@ -103,8 +101,6 @@
 		720C7A802432A1B00018B1EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				720C7A842432A4350018B1EF /* Realm.framework */,
-				720C7A832432A4350018B1EF /* RealmSwift.framework */,
 				720C7A812432A1B00018B1EF /* MapKit.framework */,
 				8A5786FBCFE46900F9B721BE /* Pods_AttractionsMap.framework */,
 			);
@@ -458,8 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T6696YN386;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(inherited)"
 				);
 				INFOPLIST_FILE = AttractionsMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,8 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T6696YN386;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(inherited)"
 				);
 				INFOPLIST_FILE = AttractionsMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

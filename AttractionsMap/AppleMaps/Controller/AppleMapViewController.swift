@@ -78,14 +78,6 @@ class AppleMapViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    func centerViewOnUserLocation() {
-        guard let location = locationManager.location?.coordinate else { return }
-        let region = MKCoordinateRegion.init(center: location,
-                                             latitudinalMeters: regionInMeters,
-                                             longitudinalMeters: regionInMeters)
-        mapView.setRegion(region, animated: true)
-    }
-    
     func centerViewOn(coordinate: CLLocationCoordinate2D) {
         let region = MKCoordinateRegion.init(center: coordinate,
                                              latitudinalMeters: regionInMeters,

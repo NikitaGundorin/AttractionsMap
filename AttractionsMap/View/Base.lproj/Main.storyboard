@@ -84,12 +84,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSn-pc-akm">
+                                <rect key="frame" x="117.5" y="765" width="179" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Show nearby attraction">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="nearbyButtonPressef:" destination="crx-MZ-a9k" eventType="touchUpInside" id="WNh-Iw-bP5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kl9-2w-1Tv" firstAttribute="leading" secondItem="qT2-KT-vK3" secondAttribute="leading" id="eCy-xu-DHs"/>
-                            <constraint firstItem="qT2-KT-vK3" firstAttribute="trailing" secondItem="kl9-2w-1Tv" secondAttribute="trailing" id="eku-D5-B2V"/>
+                            <constraint firstItem="dSn-pc-akm" firstAttribute="centerX" secondItem="Ni3-mf-NSd" secondAttribute="centerX" id="Ik4-za-rrR"/>
+                            <constraint firstItem="kl9-2w-1Tv" firstAttribute="leading" secondItem="Ni3-mf-NSd" secondAttribute="leading" id="eCy-xu-DHs"/>
+                            <constraint firstAttribute="trailing" secondItem="kl9-2w-1Tv" secondAttribute="trailing" id="eku-D5-B2V"/>
                             <constraint firstAttribute="bottom" secondItem="kl9-2w-1Tv" secondAttribute="bottom" id="gpk-yF-3jp"/>
+                            <constraint firstItem="qT2-KT-vK3" firstAttribute="bottom" secondItem="dSn-pc-akm" secondAttribute="bottom" constant="10" id="lYT-eC-iWA"/>
                             <constraint firstItem="kl9-2w-1Tv" firstAttribute="top" secondItem="Ni3-mf-NSd" secondAttribute="top" id="npU-pJ-8Gy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qT2-KT-vK3"/>
@@ -97,6 +110,7 @@
                     <tabBarItem key="tabBarItem" title="Google" image="location.circle.fill" catalog="system" id="xI2-8f-gdr"/>
                     <connections>
                         <outlet property="mapView" destination="kl9-2w-1Tv" id="yWY-HF-WwB"/>
+                        <outlet property="nearbyButton" destination="dSn-pc-akm" id="Mwy-dq-NAJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAI-dh-tjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
